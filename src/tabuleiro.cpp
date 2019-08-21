@@ -4,7 +4,38 @@
 using namespace std;
 
 
+void jogada(char **tabuleiro, int linhas, int colunas, char j, int jj, int *preg){ //FUnção qe checa se a posição está ocupada e posiciona os X e O
+*preg = *preg + 1;
+int l, c, aux = 0;
 
+do{
+if(jj == 1){ //SE for o jogador 1, direciona a mensagem para o jogador 1;
+
+	aviso(jj);
+	cout<<"\t\t";
+	cin>>l;
+	cin>>c;
+
+}else if(jj == 2){ //Se for o jogador 2, direciona a mensagem para ele; 
+	aviso(jj);
+	cout<<"\t\t";
+	cin>>l;
+	cin>>c;
+}
+	if(tabuleiro[l][c] == ' '){ //Se a posição [l][c] do tabuleiro estiver com o caracter padrao estabelecido '-', substitui
+		tabuleiro[l][c] = j;
+		aux = 1;
+	}else if(l > 2 || c > 2){
+		cout<<"\n\tPosição inexistente!!\tPor favor, escolha outra posição.\n";
+	}else{ //Se não estiver com '-', avisa que está ocupado
+		cout<<"\n\tPosição já ocupada!\tEscolha uma outra posição!\n";
+		cout<<"\n";
+		status(tabuleiro, linhas, jj, colunas, j); //e informa as posições que o jogador já ocupa
+		aux = 0; 
+
+	}
+}while(aux == 0);
+}
 
 void imprimirTabuleiro(char **tabuleiro, int linhas, int colunas, int preg){ //FUNÇÃO PARA IMPRIMIR O TABULEIRO
 
