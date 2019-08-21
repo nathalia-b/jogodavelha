@@ -30,13 +30,14 @@ cout << "\n\t> O jogador 1 está como " <<*j1<<"\n\t> O jogador 2 está como "<<
 
 }
 
-int verificando_vencedor(char **t, char j1, char j2, char *win){
+int verificando_vencedor(char **t, char j1, char j2, char *win){ //Não tão otimizado quanto poderia ser. 
 
 /*				>>>		Compara as linhas	<<<				*/
 
 if(t[0][0] == t[0][1] && t[0][0] == t[0][2] && t[0][0] != ' '){
 /* Uma das posições deve ser diferente de ' ' pois este foi o caracter utilizado para preencher/zerar o tabuleiro. 
 	Ou seja, essa comparação garante que estamos checando apenas posições preenchidas pelos jogadores */ 
+
 /* Se as posições são iguais, checamos uma delas para ver qual caracter está lá, e a quem pertence (jogador 1 ou 2) */	
 
 				if(t[0][0] == j1){ 	//Se a posição [Y][Z] for igual a variável inteira correspondente a J1 
