@@ -6,11 +6,9 @@
 #include <iostream>
 using namespace std;
 
-void aviso(int jj); 
-void status(char **tabuleiro, int linhas, int aux, int colunas, char jx);
-void lembrete(int jj, char j, char **tabuleiro, int linhas, int colunas, int preg);
+void aviso(int jj); //IMPRIME AVISO PARA DIZER QUE É A VEZ DO JOGADOR;
+void status(char **tabuleiro, int linhas, int aux, int colunas, char jx); /*INFORMA QUAIS POSIÇÕES O JOGADOR OCUPA ATUALMENTE SE ELE TENTAR PREENCHER UMA POSIÇÃO JÁ OCUPADA*/
+void lembrete(int jj, char j, char **tabuleiro, int linhas, int colunas, int preg); /* INFORMA QUANTAS RODADAS FALTAM PRA ACABAR O JOGO E PERGUNTA SE QUER VER O TABULEIRO ATUAL*/ 
 
 
-//O módulo Jogador deve conter as informações do jogador, retornar se o 
-//jogador fez alguma jogada errada, informar que se encontra na vez do jogador.
 #endif
