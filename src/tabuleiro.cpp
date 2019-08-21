@@ -4,6 +4,7 @@
 using namespace std;
 
 
+
 void jogada(char **tabuleiro, int linhas, int colunas, char j, int jj, int *preg){ 
 *preg = *preg + 1;
 int l, c, aux = 0;
@@ -83,7 +84,7 @@ for(i = 0; i<linhas; i++){
 
 
 void completo(char **tabuleiro, int linhas, int colunas){
-	cout<<"Verificando tabuleiro...\n";
+	cout<<"\nVerificando tabuleiro...\n";
 	int i, j, tab_comp;
 
 	for(i = 0; i<linhas; i++){
@@ -92,7 +93,7 @@ void completo(char **tabuleiro, int linhas, int colunas){
 				cout<<"Hmm... O tabuleiro está incompleto";
 				return;
 			}else{
-				cout<<"Ótimo, o tabuleiro está completo! Vamos ver quem venceu...\n";
+				cout<<"Ótimo, o tabuleiro está completo! Vamos ver se alguém venceu...\n";
 				return;
 			} 
 			
