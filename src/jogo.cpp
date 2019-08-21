@@ -22,7 +22,7 @@ if(resp == 'X' || resp == 'x'){
 	*j2 = 'X';
 	*j1 = 'O';
 }else{
-	cout<<"Opcao invalida!";
+	cout<<"Opcao invalida! Escolha novamente!\n";
 }
 }while(resp != 'O' && resp != 'o' && resp != 'x' && resp != 'X');
 
@@ -32,29 +32,34 @@ cout << "\n\t> O jogador 1 está como " <<*j1<<"\n\t> O jogador 2 está como "<<
 
 int verificando_vencedor(char **t, char j1, char j2, char *win){
 
+/*				>>>		Compara as linhas	<<<				*/
+
 if(t[0][0] == t[0][1] && t[0][0] == t[0][2] && t[0][0] != ' '){
-	
-				if(t[0][0] == j1){
+/* Uma das posições deve ser diferente de ' ' pois este foi o caracter utilizado para preencher/zerar o tabuleiro. 
+	Ou seja, essa comparação garante que estamos checando apenas posições preenchidas pelos jogadores */ 
+/* Se as posições são iguais, checamos uma delas para ver qual caracter está lá, e a quem pertence (jogador 1 ou 2) */	
 
-					*win = j1;
-					return 0;
-
+				if(t[0][0] == j1){ 	//Se a posição [Y][Z] for igual a variável inteira correspondente a J1 
+					*win = j1;		//A variável que determina o vencedor torna-se j1;
+					return 0;		/*Retorna, pois o programa já pode ser encerrado depois que atende a UMA das condicionais. Não há mais nada a ser verificado*/
 				}else if(t[0][0] == j2){
-
 					*win = j2; 
 					return 0;
-
 				}
+
 }else if(t[1][0] == t[1][1] && t[1][0] == t[1][2] && t[1][0] != ' '){
+
+
 				if(t[1][0] == j1){
 					*win = j1;
 					return 0;
-				}else if(t[1][0] == j2){
-					*win = j2;
-					return 0;
+				}else if(t[1][0] == j2){	//Se a posição [Y][Z] for igual a variável inteira correspondente a J2
+					*win = j2;				//A variável que determina o vencedor torna-se j2;
+					return 0;				/*Retorna, pois o programa já pode ser encerrado depois que atende a UMA das condicionais. Não há mais nada a ser verificado, já há um vencedor*/
 				}
 
 }else if(t[2][0] == t[2][1] && t[2][0] == t[2][2] && t[2][0] != ' '){
+
 				if(t[2][0] == j1){
 					*win = j1;
 					return 0;
@@ -62,7 +67,9 @@ if(t[0][0] == t[0][1] && t[0][0] == t[0][2] && t[0][0] != ' '){
 					*win = j2;
 					return 0;
 				}
-	
+
+/*				>>>		Compara as colunas	<<<				*/
+
 }else if(t[0][0] == t[1][0] && t[0][0] == t[2][0] && t[0][0] != ' '){ 
 
 				if(t[0][0] == j1){
@@ -88,7 +95,11 @@ if(t[0][0] == t[0][1] && t[0][0] == t[0][2] && t[0][0] != ' '){
 					*win = j2;
 					return 0;
 				}
+
+/*				>>>		Compara as diagonais	<<<				*/
+
 }else if(t[0][0] == t[1][1] && t[0][0] == t[2][2] && t[0][0] != ' '){
+
 				if(t[0][0] == j1){
 					*win = j1;
 					return 0;
@@ -97,6 +108,7 @@ if(t[0][0] == t[0][1] && t[0][0] == t[0][2] && t[0][0] != ' '){
 					return 0;
 				}
 }else if(t[0][2] == t[1][1] && t[0][2] == t[2][0] && t[0][2] != ' '){
+
 				if(t[0][2] == j1){
 					*win = j1;
 					return 0;
@@ -105,14 +117,14 @@ if(t[0][0] == t[0][1] && t[0][0] == t[0][2] && t[0][0] != ' '){
 					return 0;
 				}
 
-}else{
-	*win = '0';
+}else{ //Se não tiver linha, coluna ou diagonal com valores iguais:
+	*win = '0';	//A variável win, que determina o vencedor, é 0.
 	return 0;
 }
 }
 	
 void ganhou(char j, int jj, int jjj){
-	cout<<"Sentimos muito, jogador "<< jj <<", já existe um ganhador e ele é o jogador "<<jjj<<"! Parabéns!";
+	cout<<"Sentimos muito, jogador "<< jj <<", já existe um ganhador e ele é o jogador "<<jjj<<"! Parabéns!\n";
 }
 
 
