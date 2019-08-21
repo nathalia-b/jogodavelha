@@ -30,43 +30,8 @@ cout << "\n\t> O jogador 1 está como " <<*j1<<"\n\t> O jogador 2 está como "<<
 
 }
 
-
-void jogada(char **tabuleiro, int linhas, int colunas, char j, int jj, int *preg){ //FUnção qe checa se a posição está ocupada e posiciona os X e O
-*preg = *preg + 1;
-int l, c, aux = 0;
-
-do{
-if(jj == 1){ //SE for o jogador 1, direciona a mensagem para o jogador 1;
-
-	aviso(jj);
-	cout<<"\t\t";
-	cin>>l;
-	cin>>c;
-
-}else if(jj == 2){ //Se for o jogador 2, direciona a mensagem para ele; 
-	aviso(jj);
-	cout<<"\t\t";
-	cin>>l;
-	cin>>c;
-}
-	if(tabuleiro[l][c] == ' '){ //Se a posição [l][c] do tabuleiro estiver com o caracter padrao estabelecido '-', substitui
-		tabuleiro[l][c] = j;
-		aux = 1;
-	}else if(l > 2 || c > 2){
-		cout<<"\n\tPosição inexistente!!\tPor favor, escolha outra posição.\n";
-	}else{ //Se não estiver com '-', avisa que está ocupado
-		cout<<"\n\tPosição já ocupada!\tEscolha uma outra posição!\n";
-		cout<<"\n";
-		status(tabuleiro, linhas, jj, colunas, j); //e informa as posições que o jogador já ocupa
-		aux = 0; 
-
-	}
-}while(aux == 0);
-}
-
 int verificando_vencedor(char **t, char j1, char j2, char *win){
 
-//verificando as vitorias horizontais
 if(t[0][0] == t[0][1] && t[0][0] == t[0][2] && t[0][0] != ' '){
 	
 				if(t[0][0] == j1){
@@ -98,7 +63,7 @@ if(t[0][0] == t[0][1] && t[0][0] == t[0][2] && t[0][0] != ' '){
 					return 0;
 				}
 	
-}else if(t[0][0] == t[1][0] && t[0][0] == t[2][0] && t[0][0] != ' '){ //CHECANDO AS VERTICAISSSSSSSSSSSSSSSSSSSS
+}else if(t[0][0] == t[1][0] && t[0][0] == t[2][0] && t[0][0] != ' '){ 
 
 				if(t[0][0] == j1){
 					*win = j1;
@@ -185,7 +150,7 @@ int cont;
 					if(completo(tabuleiro, linhas, colunas) == 0){
 						cout<<"Ótimo, o tabuleiro está completo! Vamos ver quem venceu...\n";
 					}else{
-						cout<<"Hmm... O tabuleiro está incompleto"
+						cout<<"Hmm... O tabuleiro está incompleto";
 					}
 					if(win == j1){
 					cout<<"\n\t> O ganhador é o jogador 1 ("<<win<<")!! Parabéns!";	
