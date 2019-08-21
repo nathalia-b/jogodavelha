@@ -184,6 +184,8 @@ int cont;
 				if(cont == 8){
 					if(completo(tabuleiro, linhas, colunas) == 0){
 						cout<<"Ótimo, o tabuleiro está completo! Vamos ver quem venceu...\n";
+					}else{
+						cout<<"Hmm... O tabuleiro está incompleto"
 					}
 					if(win == j1){
 					cout<<"\n\t> O ganhador é o jogador 1 ("<<win<<")!! Parabéns!";	
