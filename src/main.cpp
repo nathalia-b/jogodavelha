@@ -36,20 +36,6 @@ escolherJogador(&j1, &j2);
 imprimirTabuleiro(tabuleiro, linhas, colunas, preg);
 controla_rodadas(tabuleiro, linhas, colunas, preg, j1, j2, jj1, jj2, win);
 
-
-//verificando_vencedor(tabuleiro, j1, j2);
-/*if(completo(tabuleiro, linhas, colunas) == 0){
-int venc = verificando_vencedor(tabuleiro, j1, j2);
-	if(venc == 1){
-		cout<<"O vencedor é o jogador 1!\n";
-	}else if(venc == 2){
-		cout<<"O vencedor é o jogador 2!\n";
-	}else if(venc == 0){
-		cout<<"Poxa, deu velha! :(\n";
-	}
-}else{
-	cout<<"Tabuleiro incompleto.";
-}*/
 cout<<"\nDeseja jogar novamente? 1. Sim 2. Não\n";
 cin >> resp; 
 if(resp == 1){
