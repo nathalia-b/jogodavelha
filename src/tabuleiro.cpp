@@ -4,7 +4,7 @@
 using namespace std;
 
 
-void jogada(char **tabuleiro, int linhas, int colunas, char j, int jj, int *preg){ //FUnção qe checa se a posição está ocupada e posiciona os X e O
+void jogada(char **tabuleiro, int linhas, int colunas, char j, int jj, int *preg){ 
 *preg = *preg + 1;
 int l, c, aux = 0;
 
@@ -22,12 +22,12 @@ if(jj == 1){ //SE for o jogador 1, direciona a mensagem para o jogador 1;
 	cin>>l;
 	cin>>c;
 }
-	if(tabuleiro[l][c] == ' '){ //Se a posição [l][c] do tabuleiro estiver com o caracter padrao estabelecido '-', substitui
+	if(tabuleiro[l][c] == ' '){ //Se a posição [l][c] do tabuleiro estiver com o caracter padrao estabelecido ' ', substitui
 		tabuleiro[l][c] = j;
 		aux = 1;
 	}else if(l > 2 || c > 2){
 		cout<<"\n\tPosição inexistente!!\tPor favor, escolha outra posição.\n";
-	}else{ //Se não estiver com '-', avisa que está ocupado
+	}else{ //Se não estiver com ' ', avisa que está ocupado
 		cout<<"\n\tPosição já ocupada!\tEscolha uma outra posição!\n";
 		cout<<"\n";
 		status(tabuleiro, linhas, jj, colunas, j); //e informa as posições que o jogador já ocupa
@@ -82,21 +82,23 @@ for(i = 0; i<linhas; i++){
 }
 
 
-int completo(char **tabuleiro, int linhas, int colunas){
+void completo(char **tabuleiro, int linhas, int colunas){
 	cout<<"Verificando tabuleiro...\n";
 	int i, j, tab_comp;
 
 	for(i = 0; i<linhas; i++){
 		for(j = 0; j<colunas; j++){
-			if(tabuleiro[i][j] == '-'){
-				tab_comp = 1;
-				return tab_comp;
+			if(tabuleiro[i][j] == ' '){
+				cout<<"Hmm... O tabuleiro está incompleto";
+				return;
 			}else{
-				tab_comp = 0;
+				cout<<"Ótimo, o tabuleiro está completo! Vamos ver quem venceu...\n";
+				return;
 			} 
+			
 	}
 }
-	return tab_comp; 
+	return;
 }
 
 
