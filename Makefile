@@ -1,5 +1,8 @@
-# Makefile for the Image Processing Project
-#         made by Sandra Bastos
+# Makefile para Jogo da Velha 
+#					por Nathalia Bezerra
+
+# Adaptado de: Make file for Image Processing Project
+#        			 made by Sandra Bastos
 
 # phony targets ("recipes" to be executed) 
 
