@@ -12,7 +12,7 @@ make
 ```
 # Sobre o programa: 
 > 'Tabuleiro' contém as funções:
-    - Posicionar o 'X' e o 'O' no tabuleiro, além de identificar se a posição escolhida existe e é válida; 
+- Posicionar o 'X' e o 'O' no tabuleiro, além de identificar se a posição escolhida existe e é válida; 
     - Imprimir o tabuleiro antes e depois do jogo;
     - Verificar se o tabuleiro está completo; 
     - Limpar o tabuleiro;
