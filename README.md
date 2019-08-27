@@ -11,20 +11,20 @@ make
 
 ```
 # Sobre o programa: 
-> 'Tabuleiro' contém as funções:
+**_'Tabuleiro' contém as funções:_**
 - Posicionar o 'X' e o 'O' no tabuleiro, além de identificar se a posição escolhida existe e é válida; 
 - Imprimir o tabuleiro antes e depois do jogo;
 - Verificar se o tabuleiro está completo; 
 - Limpar o tabuleiro;
 
-> 'Jogo' contém as funções: 
+**_'Jogo' contém as funções:_** 
 - Escolher entre 'X' e 'O';
 - Verificar se há alguém que se encaixe na condição de vencedor, verificando linhas/colunas/diagonais;
 - Imprimir o aviso para dizer que há um ganhador no meio da partida (a partir da jogada 5); 
 - Imprimir quem é o vencedor após o tabuleiro estar completo
 - Controlar jogadas, ou seja, coordenar a ordem das jogadas e imprimir avisos referentes às ações do usuário; 
   
-> 'Jogador' contém as funções:
+**_'Jogador' contém as funções:_**
 - Imprimir aviso que indica que é a vez do jogador;
 - Imprimir posições que o jogador ocupa quando ele tenta preencher uma posição já ocupada; 
 - Relembrar o caracter com o qual o usuário está jogando e informar quantas rodadas faltam; 
