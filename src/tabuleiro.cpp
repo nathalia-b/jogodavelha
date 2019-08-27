@@ -26,13 +26,16 @@ if(jj == 1){ //SE for o jogador 1, direciona a mensagem para o jogador 1;
 	if(tabuleiro[l][c] == ' '){ //Se a posição [l][c] do tabuleiro estiver com o caracter padrao estabelecido ' ', substitui
 		tabuleiro[l][c] = j;
 		aux = 1;
-	}else if(l > 2 || c > 2){
-		cout<<"\n\tPosição inexistente!!\tPor favor, escolha outra posição.\n";
+	}else if(l > 2){	//Se a linha for maior que 2, imprime aviso. 
+		cout<<"\n\tPosição inexistente!!\tPor favor, escolha outra posição.";
+	}else if(c > 2){	//Se a coluna for maior que 2, imprime aviso.
+		cout<<"\n\tPosição inexistente!!\tPor favor, escolha outra posição.";
+
 	}else{ //Se não estiver com ' ', avisa que está ocupado
-		cout<<"\n\tPosição já ocupada!\tEscolha uma outra posição!\n";
+		cout<<"\n\tPosição já ocupada!\tEscolha uma outra posição!";
 		cout<<"\n";
 		status(tabuleiro, linhas, jj, colunas, j); //e informa as posições que o jogador já ocupa
-		aux = 0; 
+		aux = 0; //Variável uxiliar permanece em zero para que o do while continue até o usuário colocar uma posição valia. 
 
 	}
 }while(aux == 0);
