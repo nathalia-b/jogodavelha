@@ -13,13 +13,13 @@ do{
 if(jj == 1){ //SE for o jogador 1, direciona a mensagem para o jogador 1;
 
 	aviso(jj);
-	cout<<"\t\t";
+	cout<<"\t\t\t\t";
 	cin>>l;
 	cin>>c;
 
 }else if(jj == 2){ //Se for o jogador 2, direciona a mensagem para ele; 
 	aviso(jj);
-	cout<<"\t\t";
+	cout<<"\t\t\t\t";
 	cin>>l;
 	cin>>c;
 }
