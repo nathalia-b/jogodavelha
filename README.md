@@ -1,8 +1,8 @@
 # Jogo da velha
-> Jogo da velha simples desenvolvido em C/C++ para a matéria de Linguagem de Programação I - 2019.2; 
+**Jogo da velha simples desenvolvido em C/C++ para a matéria de Linguagem de Programação I - 2019.2 ministrada pelo professor Samuel da Silva;**
 
 # Para compilar e executar:
-> Clone o repositório, vá na pasta e utilize o comando 'make' para gerar o executável. Depois, digite ./exe para executar o programa.
+**Clone o repositório, vá na pasta e utilize o comando 'make' para gerar o executável. Depois, digite ./exe para executar o programa.**
  
 ```
 git clone https://github.com/nathalia-b/jogodavelha
@@ -28,3 +28,6 @@ make
 - Imprimir aviso que indica que é a vez do jogador;
 - Imprimir posições que o jogador ocupa quando ele tenta preencher uma posição já ocupada; 
 - Relembrar o caracter com o qual o usuário está jogando e informar quantas rodadas faltam; 
+
+#O que eu mudaria?
+**Há alguns aspectos do meu código que eu alteraria posteriormente. Algumas alterações com o intuito de otimizar não somente o desempenho, mas também a jogabilidade e a interação com o usuário. No mais, foi um projeto interessante de desenvolver.**
