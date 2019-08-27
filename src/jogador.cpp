@@ -35,13 +35,8 @@ cout<<"\n";
 void lembrete(int jj, char j, char **tabuleiro, int linhas, int colunas, int preg){
 int resp, x = (linhas*colunas)-preg;
 cout<<"\n\tJogador " << jj << ", lembre-se: você é o '"<<j<<"'!\n";
-cout<<"\tFaltam "<<x<<" rodadas para o fim do jogo.\nDeseja ver como está o tabuleiro nesse momento? 1. Sim 2. Não\n";
+cout<<"Faltam apenas "<<x<<" rodadas para o fim do jogo. ;)\n";
 cout<<"\t";
-cin>>resp;
-if(resp == 1){
-	imprimirTabuleiro(tabuleiro, linhas, colunas, preg);
-}else if(resp == 2){
-	cout<<"\tTudo bem... Que o jogo continue!\n";
-}
+
 }
 
