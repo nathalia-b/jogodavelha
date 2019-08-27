@@ -125,7 +125,7 @@ if(t[0][0] == t[0][1] && t[0][0] == t[0][2] && t[0][0] != ' '){
 }
 	
 void ganhou_meio(char j, int jj, int jjj){
-	cout<<"Sentimos muito, jogador "<< jj <<", já existe um ganhador e ele é o jogador "<<jjj<<"! Parabéns!\n";
+	cout<<"Já existe um ganhador, e ele é o jogador "<<jjj<<"! Parabéns!" << " Sentimos muito, jogador " << jj << " :( \n";
 }
 
 void ver_vencedor(int win, int j1, int j2){
