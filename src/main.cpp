@@ -16,10 +16,10 @@ int i, j, linhas = 3, colunas = 3; /*Variáveis auxiliares para os fors, o núme
 char win;  
 
 tabuleiro = (char**)calloc(linhas, sizeof(char*));	//Alocando o tabuleiro
-
 for(i = 0; i<linhas; i++){
 	tabuleiro[i] = (char*)calloc(colunas, sizeof(char));	//Alocando o tabuleiro
 }
+
 
 for(i = 0; i<linhas; i++){
 	for(j = 0; j<colunas; j++){			/*Definindo um caracter padrão para inicializar o tabuleiro, neste caso, espaço*/ 
@@ -27,7 +27,6 @@ for(i = 0; i<linhas; i++){
 	}
 }
 
-//menu();
 int resp;
 do{
 imprimirTabuleiro(tabuleiro, linhas, colunas, preg); //Imprime tabuleiro antes do jogo começar para referencias de posiçoes
@@ -47,8 +46,6 @@ if(resp == 1){
 	cout<<"\nTudo bem, até a próxima! :)\n ";
 }
 }while(resp < 2 && resp != 0); //O laço é encerrado se a resposta do usuário for que não deseja jogar novamente. 
-
-free(tabuleiro);
 
 return 0;
 
