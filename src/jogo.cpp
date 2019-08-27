@@ -131,10 +131,10 @@ void ganhou_meio(char j, int jj, int jjj){
 void ver_vencedor(int win, int j1, int j2){
 
 			if(win == j1){			//Qual o jogador venceu:
-			cout<<"\n\t> O ganhador é o jogador 1 ("<<win<<")!! Parabéns!";	
+			cout<<"\n\t> O ganhador é o jogador 1 ("<<(char)win<<")!! Parabéns!";	
 			return;
 			}else if(win == j2){
-			cout<<"\n\t> O ganhador é o jogador 2 ("<<win<<")!! Parabéns!";	
+			cout<<"\n\t> O ganhador é o jogador 2 ("<<(char)win<<")!! Parabéns!";	
 			return;
 			}else{
 			cout<<"\n\tPoxa!!!! Deu velha :(\n";
@@ -166,7 +166,7 @@ int cont;
 
 		if(cont >= 4){		//A partir da 5 jogada começa a verificar se já existe um vencedor. 
 			verificando_vencedor(tabuleiro, j1, j2, &win);
-			if(win != '0'){	//Se houver um vencedor,
+			if(win != '0' && cont < 8){	//Se houver um vencedor,
 				if(win == j1){	//Verifica qual é, jogador 1 
 					ganhou_meio(win, jj2, jj1);
 					imprimirTabuleiro(tabuleiro, linhas, colunas, preg);	
@@ -177,11 +177,13 @@ int cont;
 					break;
 				}
 			}
-				if(cont == 8){		//Quando estiver na última posição, verifica:
+				if(cont == 8){		//Quando estiver na última posição, ou seja, última jogada da rodada, verifica:
 
 					completo(tabuleiro, linhas, colunas);	//Se tabuleiro está completo
-					
-					ver_vencedor(win, j1, j2);
+					ver_vencedor(win, j1, j2); //Quem é o vencedor (ou se deu velha); 
+					imprimirTabuleiro(tabuleiro, linhas, colunas, preg); //E por fim, imprime o tabuleiro;
+
+
 
 				}
 			}
