@@ -169,14 +169,14 @@ int cont;
 			verificando_vencedor(tabuleiro, j1, j2, &win);
 			if(win != '0' && cont < 8){	//Se houver um vencedor,
 				if(win == j1){	//Verifica qual é, jogador 1 
-					cout<<"Hmm... O tabuleiro está incompleto, mas..."; /*Se houver vencedor nesse ponto, o tabuleiro
+					cout<<"Hmm... O tabuleiro está incompleto, mas...\n"; /*Se houver vencedor nesse ponto, o tabuleiro
 																sempre estará incompleto, pois este ainda é o meio da partida,
 																portanto, seria impossível o tabuleiro estar completo.*/	
 					ganhou_meio(win, jj2, jj1);				 
 					imprimirTabuleiro(tabuleiro, linhas, colunas, preg);	
 					break;
 				}else{			//Ou jogador 2;
-					cout<<"Hmm... O tabuleiro está incompleto, mas..."; 
+					cout<<"Hmm... O tabuleiro está incompleto, mas...\n"; 
 					ganhou_meio(win, jj1, jj2);
 					imprimirTabuleiro(tabuleiro, linhas, colunas, preg);
 					break;
