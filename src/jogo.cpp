@@ -149,12 +149,13 @@ int cont;
 
 	for(cont = 0; cont<(linhas*colunas); cont++){		//Determina a ordem das jogadas; 
 
-		if(cont == 3){		/*Emite um aviso lembrando ao jogador 2 com qual caracter ele está jogando,
-						quantas rodadas faltam para o fim do jogo e se ele deseja ver o tabuleiro atualizado*/
+		imprimirTabuleiro(tabuleiro, linhas, colunas, preg); //IMprime o tabuleiro a cada jogada.
+		
+		if(cont == 3){		/*Emite um aviso lembrando aos jogadores com qual caracter eles estão jogando 
+										e quantas rodadas faltam para o fim do jogo.*/ 
 			lembrete( jj2,  j2, tabuleiro, linhas, colunas, preg);
 
-		}else if(cont == 6){	/*Emite um aviso lembrando ao jogador 1 com qual caracter ele está jogando,
-						quantas rodadas faltam para o fim do jogo e se ele deseja ver o tabuleiro atualizado*/
+		}else if(cont == 6){					
 			lembrete( jj1,  j1, tabuleiro, linhas, colunas, preg);
 		}
 
@@ -168,10 +169,12 @@ int cont;
 			verificando_vencedor(tabuleiro, j1, j2, &win);
 			if(win != '0' && cont < 8){	//Se houver um vencedor,
 				if(win == j1){	//Verifica qual é, jogador 1 
+					completo(tabuleiro, linhas, colunas);
 					ganhou_meio(win, jj2, jj1);
 					imprimirTabuleiro(tabuleiro, linhas, colunas, preg);	
 					break;
 				}else{			//Ou jogador 2;
+					completo(tabuleiro, linhas, colunas);
 					ganhou_meio(win, jj1, jj2);
 					imprimirTabuleiro(tabuleiro, linhas, colunas, preg);
 					break;
