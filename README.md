@@ -29,5 +29,5 @@ make
 - Imprimir posições que o jogador ocupa quando ele tenta preencher uma posição já ocupada; 
 - Relembrar o caracter com o qual o usuário está jogando e informar quantas rodadas faltam; 
 
-#O que eu mudaria?
+# O que eu mudaria?
 **Há alguns aspectos do meu código que eu alteraria posteriormente. Algumas alterações com o intuito de otimizar não somente o desempenho, mas também a jogabilidade e a interação com o usuário. No mais, foi um projeto interessante de desenvolver.**
